@@ -5,10 +5,7 @@ import com.example.kt_less23.api_service.ApiClient
 import com.example.kt_less23.api_service.ApiInterface
 import com.example.kt_less23.api_service.Data
 import com.example.kt_less23.api_service.Model
-
 import retrofit2.Response
-
-
 class Repository(private val client: ApiClient) {
     suspend fun getCrypto(name: String): Response<Model> {
         val apiInterface = client.client.create(ApiInterface::class.java)
